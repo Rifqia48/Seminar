@@ -1,1 +1,750 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rifqi Fausta Dianta — Portfolio Seminar PPG</title>
+  
+  <!-- Google Fonts: Inter & Newsreader -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Newsreader:ital,opsz,wght@1,6..72,400;1,6..72,500;1,6..72,600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0a0a0a',
+            charcoal: '#1c1c1c',
+            'gray-dark': '#333333',
+            'gray-mid': '#6f6f6f',
+            'gray-light': '#c8c8c8',
+            'gray-faint': '#e8e6e1',
+            paper: '#fdfcfb',
+            'paper-warm': '#f7f5f0',
+            'paper-card': '#fbfaf7',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+            serif: ['Newsreader', 'Georgia', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
 
+  <style>
+    /* Subtle editorial film grain */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.22;
+      background-image: 
+        radial-gradient(circle at 15% 25%, rgba(0,0,0,0.02) 0, transparent 40%),
+        radial-gradient(circle at 85% 75%, rgba(0,0,0,0.02) 0, transparent 40%);
+    }
+
+    /* Hide scrollbar for clean tab browsing on mobile */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-paper text-ink font-sans antialiased selection:bg-ink selection:text-paper min-h-screen flex flex-col">
+
+  <!-- NAVIGATION BAR -->
+  <nav class="sticky top-0 z-50 bg-paper/95 backdrop-blur-md border-b border-gray-faint px-[1.25rem] sm:px-[2rem] lg:px-[3.75rem] py-[1rem] transition-all">
+    <div class="max-w-[77.5rem] mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-[0.75rem] sm:gap-[1rem]">
+      <a href="#" class="font-black text-[0.85rem] tracking-[0.08em] uppercase text-ink">
+        Rifqi Fausta Dianta <span class="font-normal text-gray-mid ml-[0.35rem]">PPG Matematika</span>
+      </a>
+      <ul class="flex flex-wrap items-center gap-[1rem] sm:gap-[1.5rem] text-[0.72rem] font-bold tracking-[0.06em] uppercase text-charcoal">
+        <li><a href="#profil" class="hover:text-ink transition-colors pb-[0.25rem] border-b-2 border-transparent hover:border-ink">Profil</a></li>
+        <li><a href="#portofolio-lk" class="hover:text-ink transition-colors pb-[0.25rem] border-b-2 border-transparent hover:border-ink">Lembar Kerja</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="flex-grow">
+    
+    <!-- HERO SECTION (WITH ONLY 1 PROFILE PHOTO) -->
+    <section id="profil" class="border-b border-gray-faint px-[1.25rem] sm:px-[2rem] lg:px-[3.75rem] py-[3.5rem] sm:py-[5rem] lg:py-[6.5rem]">
+      <div class="max-w-[77.5rem] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-[2.5rem] lg:gap-[4rem] items-center">
+        
+        <!-- Left Column: Editorial Statement -->
+        <div class="lg:col-span-8 flex flex-col items-start">
+          <span class="inline-block text-[0.68rem] font-extrabold tracking-[0.14em] uppercase border border-ink px-[0.85rem] py-[0.4rem] mb-[1.75rem] bg-paper-warm text-charcoal">
+            Seminar Pendidikan Profesi Guru · 2026
+          </span>
+          <h1 class="text-[2.75rem] sm:text-[4rem] lg:text-[5.5rem] font-extrabold leading-[0.98] tracking-[-0.04em] text-ink text-balance">
+            Menuntun Kodrat,<br>
+            <em class="font-serif italic font-normal text-gray-mid">Mengonstruksi Nalar.</em>
+          </h1>
+          <p class="text-[1rem] sm:text-[1.1rem] leading-[1.7] text-gray-dark max-w-[37.5rem] mt-[1.5rem] mb-[2rem]">
+            Portofolio reflektif calon guru matematika yang memadukan filosofi humanis Ki Hadjar Dewantara, kerangka Pembelajaran Sosial Emosional (CASEL), Desain Universal Pembelajaran (DUP), dan inovasi media digital interaktif di SMAN 6 Yogyakarta.
+          </p>
+          <div class="flex flex-wrap items-center gap-[1rem]">
+            <a href="#portofolio-lk" class="inline-flex items-center gap-[0.75rem] text-[0.78rem] font-bold tracking-[0.08em] uppercase bg-ink text-paper px-[1.5rem] py-[0.85rem] rounded-[0.125rem] hover:bg-charcoal transition-all">
+              Jelajahi Lembar Kerja ↓
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Column: Single Photo Card -->
+        <div class="lg:col-span-4 w-full max-w-[22rem] mx-auto lg:max-w-none">
+          <div class="bg-paper-warm border border-gray-faint p-[0.75rem] rounded-[0.25rem] shadow-sm">
+            <!-- FOTO SATU-SATUNYA -->
+            <img 
+              src="assets/images/profile.jpg" 
+              alt="Foto Rifqi Fausta Dianta" 
+              class="w-full aspect-[4/5] object-cover rounded-[0.125rem] grayscale contrast-[1.05] hover:grayscale-0 transition-all duration-500 block"
+              onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80';"
+            >
+            <div class="pt-[0.75rem] pb-[0.25rem] flex flex-col text-right">
+              <span class="text-[0.78rem] font-bold uppercase tracking-[0.04em] text-ink">Rifqi Fausta Dianta, S.Pd.</span>
+              <span class="text-[0.68rem] font-medium tracking-[0.08em] uppercase text-gray-mid">NIM: 251415046 · PPG USD</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: TABS LEMBAR KERJA -->
+    <section id="portofolio-lk" class="px-[1.25rem] sm:px-[2rem] lg:px-[3.75rem] py-[3.5rem] sm:py-[5rem] lg:py-[6.5rem]">
+      <div class="max-w-[77.5rem] mx-auto">
+        
+        <!-- Header Section -->
+        <div class="mb-[2.5rem]">
+          <span class="text-[0.68rem] font-bold tracking-[0.16em] uppercase text-gray-mid block mb-[0.5rem]">
+            Dokumentasi Akademik
+          </span>
+          <div class="w-[2.75rem] h-[0.125rem] bg-ink mb-[1.5rem]"></div>
+          <h2 class="text-[2rem] sm:text-[2.75rem] lg:text-[3.25rem] font-extrabold tracking-[-0.035em] text-ink">
+            Portofolio Refleksi & Desain Inovasi
+          </h2>
+          <p class="text-gray-dark text-[1rem] max-w-[42rem] mt-[0.75rem]">
+            Pilih tab di bawah untuk menelaah setiap tahapan refleksi pengalaman belajar, rencana tindak lanjut karir, serta karya inovasi pembelajaran yang siap diujikan pada Seminar PPG.
+          </p>
+        </div>
+
+        <!-- MAIN TABS NAVIGATION (Scrollable on mobile) -->
+        <div class="flex overflow-x-auto no-scrollbar gap-[0.6rem] border-b border-gray-faint pb-[1rem] mb-[2.5rem]" role="tablist">
+          <button onclick="switchMainTab('lk1')" id="tab-btn-lk1" class="tab-btn active px-[1.25rem] py-[0.75rem] border border-ink bg-ink text-paper text-[0.75rem] font-bold tracking-[0.08em] uppercase whitespace-nowrap rounded-[0.125rem] transition-all">
+            01 / LK 1: Identifikasi Diri & Visi
+          </button>
+          <button onclick="switchMainTab('lk2')" id="tab-btn-lk2" class="tab-btn px-[1.25rem] py-[0.75rem] border border-gray-faint bg-transparent text-gray-mid hover:text-ink hover:border-ink text-[0.75rem] font-bold tracking-[0.08em] uppercase whitespace-nowrap rounded-[0.125rem] transition-all">
+            02 / LK 2: Refleksi 8 Mata Kuliah
+          </button>
+          <button onclick="switchMainTab('lk3')" id="tab-btn-lk3" class="tab-btn px-[1.25rem] py-[0.75rem] border border-gray-faint bg-transparent text-gray-mid hover:text-ink hover:border-ink text-[0.75rem] font-bold tracking-[0.08em] uppercase whitespace-nowrap rounded-[0.125rem] transition-all">
+            03 / LK 3: Refleksi PPG & RTL
+          </button>
+          <button onclick="switchMainTab('lk4')" id="tab-btn-lk4" class="tab-btn px-[1.25rem] py-[0.75rem] border border-gray-faint bg-transparent text-gray-mid hover:text-ink hover:border-ink text-[0.75rem] font-bold tracking-[0.08em] uppercase whitespace-nowrap rounded-[0.125rem] transition-all">
+            04 / LK 4: Desain Karya Inovatif
+          </button>
+        </div>
+
+        <!-- ==================== TAB PANEL 1: LK 1 ==================== -->
+        <div id="panel-lk1" class="tab-panel block">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-[2rem] lg:gap-[3.5rem]">
+            
+            <!-- Metadata Side -->
+            <div class="lg:col-span-4 space-y-[1.25rem]">
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="text-[0.68rem] font-bold uppercase tracking-[0.14em] text-gray-mid block mb-[0.35rem]">Nama Lengkap</span>
+                <p class="text-[1.05rem] font-bold text-ink">Rifqi Fausta Dianta</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="text-[0.68rem] font-bold uppercase tracking-[0.14em] text-gray-mid block mb-[0.35rem]">Nomor Induk Mahasiswa</span>
+                <p class="text-[1.05rem] font-bold text-ink">251415046</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="text-[0.68rem] font-bold uppercase tracking-[0.14em] text-gray-mid block mb-[0.35rem]">LPTK & Sekolah Latihan</span>
+                <p class="text-[1.05rem] font-bold text-ink">Universitas Sanata Dharma · SMAN 6 Yogyakarta</p>
+              </div>
+            </div>
+
+            <!-- Content Side -->
+            <div class="lg:col-span-8 space-y-[2rem]">
+              <div class="border-b border-gray-faint pb-[2rem]">
+                <span class="text-[0.68rem] font-bold tracking-[0.14em] uppercase text-gray-mid block mb-[0.5rem]">Identifikasi Visi Diri</span>
+                <h3 class="text-[1.5rem] sm:text-[1.85rem] font-bold text-ink leading-tight">
+                  Visi Pribadi untuk Pendidikan di Indonesia
+                </h3>
+                <p class="mt-[0.75rem] text-[1.05rem] text-charcoal leading-[1.75]">
+                  Membangun ekosistem pendidikan nasional yang kreatif dan berpusat pada peserta didik, demi mewujudkan manusia Indonesia yang berdaya nalar kritis, mandiri, dan bermartabat.
+                </p>
+                
+                <blockquote class="border-l-[3px] border-ink pl-[1.25rem] my-[1.5rem] text-[1.15rem] sm:text-[1.25rem] font-serif italic text-ink leading-[1.5]">
+                  "Visi pribadi saya untuk pendidikan Indonesia adalah menciptakan ruang belajar inklusif dan merata yang memungkinkan setiap anak, terlepas dari latar belakangnya, untuk mencapai potensi terbaiknya."
+                </blockquote>
+              </div>
+
+              <div class="border-b border-gray-faint pb-[2rem]">
+                <h3 class="text-[1.35rem] font-bold text-ink">Visi Pribadi sebagai Calon Guru</h3>
+                <p class="mt-[0.75rem] text-[1rem] text-charcoal leading-[1.7]">
+                  Menjadi guru Matematika yang kreatif, inklusif, dan mampu memotivasi siswa untuk berpikir kritis, mandiri, dan melihat makna matematika dalam kehidupan sehari-hari.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="text-[1.35rem] font-bold text-ink">Aksi Konkret Mencapai Visi</h3>
+                <p class="mt-[0.75rem] text-[1rem] text-charcoal leading-[1.7]">
+                  Menyediakan pembelajaran bermakna, mendukung siswa dengan pendekatan berpusat pada peserta didik, dan terus mengembangkan diri secara profesional.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ==================== TAB PANEL 2: LK 2 ==================== -->
+        <div id="panel-lk2" class="tab-panel hidden">
+          
+          <!-- SUB-TABS (8 COURSES) -->
+          <div class="flex flex-wrap gap-[0.5rem] mb-[2rem]" role="tablist">
+            <button onclick="switchSubTab('filosofi')" id="subbtn-filosofi" class="subtab-btn active px-[1rem] py-[0.5rem] text-[0.7rem] font-bold tracking-[0.06em] uppercase rounded-[0.125rem] bg-charcoal text-paper border border-charcoal">
+              Filosofi Pendidikan
+            </button>
+            <button onclick="switchSubTab('ppdp')" id="subbtn-ppdp" class="subtab-btn px-[1rem] py-[0.5rem] text-[0.7rem] font-bold tracking-[0.06em] uppercase rounded-[0.125rem] bg-paper-warm text-charcoal border border-gray-faint hover:border-ink">
+              PPDP
+            </button>
+            <button onclick="switchSubTab('growth')" id="subbtn-growth" class="subtab-btn px-[1rem] py-[0.5rem] text-[0.7rem] font-bold tracking-[0.06em] uppercase rounded-[0.125rem] bg-paper-warm text-charcoal border border-gray-faint hover:border-ink">
+              Growth Mindset
+            </button>
+            <button onclick="switchSubTab('pse')" id="subbtn-pse" class="subtab-btn px-[1rem] py-[0.5rem] text-[0.7rem] font-bold tracking-[0.06em] uppercase rounded-[0.125rem] bg-paper-warm text-charcoal border border-gray-faint hover:border-ink">
+              PSE
+            </button>
+            <button onclick="switchSubTab('pmal')" id="subbtn-pmal" class="subtab-btn px-[1rem] py-[0.5rem] text-[0.7rem] font-bold tracking-[0.06em] uppercase rounded-[0.125rem] bg-paper-warm text-charcoal border border-gray-faint hover:border-ink">
+              PMAL
+            </button>
+            <button onclick="switchSubTab('tekno')" id="subbtn-tekno" class="subtab-btn px-[1rem] py-[0.5rem] text-[0.7rem] font-bold tracking-[0.06em] uppercase rounded-[0.125rem] bg-paper-warm text-charcoal border border-gray-faint hover:border-ink">
+              Teknologi Baru
+            </button>
+            <button onclick="switchSubTab('ppl')" id="subbtn-ppl" class="subtab-btn px-[1rem] py-[0.5rem] text-[0.7rem] font-bold tracking-[0.06em] uppercase rounded-[0.125rem] bg-paper-warm text-charcoal border border-gray-faint hover:border-ink">
+              PPL Mandiri
+            </button>
+            <button onclick="switchSubTab('projek')" id="subbtn-projek" class="subtab-btn px-[1rem] py-[0.5rem] text-[0.7rem] font-bold tracking-[0.06em] uppercase rounded-[0.125rem] bg-paper-warm text-charcoal border border-gray-faint hover:border-ink">
+              Proyek Kepemimpinan
+            </button>
+          </div>
+
+          <!-- SUBTAB CONTENT: 1. FILOSOFI -->
+          <div id="subpanel-filosofi" class="subtab-panel block space-y-[1.5rem]">
+            <div class="border-b border-gray-faint pb-[1rem]">
+              <span class="text-[0.68rem] font-bold tracking-[0.14em] uppercase text-gray-mid block mb-[0.25rem]">Mata Kuliah Inti</span>
+              <h3 class="text-[1.6rem] font-bold text-ink">Filosofi Pendidikan dan Pendidikan Nilai</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem]">
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Connection</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Menyadari bahwa peran sejati guru ibarat seorang petani; hanya bisa menuntun tumbuhnya bibit anak, bukan mengubah kodratnya. Kelas harus menjadi tempat membahagiakan, bukan menekan mental peserta didik.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Challenge</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Mendekonstruksi anggapan lama bahwa wibawa guru lahir dari sikap keras dan hukuman. Beralih dari penuntutan angka kognitif semata menjadi fasilitator yang mengasuh dengan Sistem Among.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Concept</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Trilogi Kepemimpinan Ki Hadjar Dewantara, mendidik sesuai Kodrat Alam & Zaman, Growth Mindset dalam menghadapi keterbatasan, serta kemitraan Tri Sentra Pendidikan.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Change</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Menyempurnakan rancangan pembelajaran agar berpusat pada murid, mengaitkan matematika dengan konteks sosial budaya, dan merawat kebiasaan menulis jurnal refleksi harian.</p>
+              </div>
+            </div>
+            <div class="bg-paper-card border-l-[4px] border-ink p-[1.5rem] border border-gray-faint">
+              <span class="text-[0.7rem] font-bold uppercase tracking-[0.1em] text-gray-mid block mb-[0.5rem]">Artefak Pembelajaran Terpilih</span>
+              <p class="text-[0.95rem] text-charcoal mb-[1rem]">Analisis Modul Pembelajaran, Modul Ajar Revisi (Festival Cerita Data & Analisis Keselamatan Berpikir), dan Dokumen Refleksi 4C.</p>
+              <div class="flex flex-wrap gap-[1rem]">
+                <a href="https://drive.google.com/file/d/1PhPGR6hzXzSjAkFlGsVaI4raa4_EIIvO/view" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Lihat Analisis Modul ↗</a>
+                <a href="https://drive.google.com/file/d/1WGU6yJzZkdBFt4b8u3xlfnWIZ1R_kpFB/view" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Lihat Modul Revisi ↗</a>
+                <a href="https://drive.google.com/file/d/1XluyywnZ6sdeYoy820QFt3BY8cpoIQgU/view" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Lihat Refleksi 4C ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBTAB CONTENT: 2. PPDP -->
+          <div id="subpanel-ppdp" class="subtab-panel hidden space-y-[1.5rem]">
+            <div class="border-b border-gray-faint pb-[1rem]">
+              <span class="text-[0.68rem] font-bold tracking-[0.14em] uppercase text-gray-mid block mb-[0.25rem]">Mata Kuliah Inti</span>
+              <h3 class="text-[1.6rem] font-bold text-ink">Pemahaman Peserta Didik dan Pembelajaran (PPDP)</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem]">
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Connection</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Menolak pandangan tabula rasa. Memahami tahapan perkembangan peserta didik secara holistik sebagai landasan menyediakan scaffolding adaptif sesuai Zone of Proximal Development (ZPD).</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Challenge</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Scaffolding harus melalui pemudaran bertahap (fading) menuju kemandirian. Menyalurkan energi kinestetik murid usil menjadi peran tanggung jawab, serta beralih dari tunjuk acak ke Think-Pair-Share.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Concept</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Teori Perkembangan Sosiokultural Vygotsky (ZPD), Tahapan Kognitif Piaget (jembatan konkret sebelum abstrak), Konstruktivisme, Humanisme, dan Pembelajaran Berdiferensiasi.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Change</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Merombak pembelajaran seragam menjadi terdiferensiasi (LKPD dan variasi produk akhir) serta menerapkan Problem-Based Learning yang menuntut konstruksi nalar logis.</p>
+              </div>
+            </div>
+            <div class="bg-paper-card border-l-[4px] border-ink p-[1.5rem] border border-gray-faint">
+              <span class="text-[0.7rem] font-bold uppercase tracking-[0.1em] text-gray-mid block mb-[0.5rem]">Artefak Pembelajaran Terpilih</span>
+              <p class="text-[0.95rem] text-charcoal mb-[1rem]">Refleksi Individu Scaffolding, Laporan UTS Analisis Profil Belajar Heterogen, dan Modul Ajar Fungsi Eksponen Terdiferensiasi.</p>
+              <div class="flex flex-wrap gap-[1rem]">
+                <a href="https://drive.google.com/file/d/1IpcoKk4SM0-bDALgeOouGNlQV3P5Sja8/view" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Lihat Refleksi Individu ↗</a>
+                <a href="https://drive.google.com/file/d/12MRIHY2xCewxh8TDQ2J-1SnZUfAyzFOO/view" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Lihat UTS PPDP ↗</a>
+                <a href="https://drive.google.com/file/d/1kr6PzROaWcYsoxy4eUm24z54DBz0Yj_X/view" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Lihat Modul Eksponen ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBTAB CONTENT: 3. GROWTH MINDSET -->
+          <div id="subpanel-growth" class="subtab-panel hidden space-y-[1.5rem]">
+            <div class="border-b border-gray-faint pb-[1rem]">
+              <span class="text-[0.68rem] font-bold tracking-[0.14em] uppercase text-gray-mid block mb-[0.25rem]">Mata Kuliah Selektif</span>
+              <h3 class="text-[1.6rem] font-bold text-ink">Growth Mindset</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem]">
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Connection</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Ketidakfokusan dan ketergantungan murid sering kali berakar dari ketidakpercayaan diri (refleksi kasus Nice pada Statistika Bivariat). Pendidik harus memiliki growth mindset terhadap proses belajar murid.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Challenge</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Menumbuhkan growth mindset menuntut asesmen diagnostik. Praktik diubah dengan menerapkan process-praise pada ketelitian langkah awal (tabel x², y², xy) ketimbang menuntut hasil akhir instan.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Concept</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Neuroplastisitas (otak dapat bertumbuh), peralihan TTM (Talent, Takdir, Menghindar) ke BUM (Belajar, Usaha, Menerima), Process-Praise, The Power of Yet, dan Productive Failure.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Change</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Memberikan apresiasi proses, menciptakan iklim kelas yang aman dari rasa malu saat salah, serta terbuka menerima umpan balik untuk refleksi diri.</p>
+              </div>
+            </div>
+            <div class="bg-paper-card border-l-[4px] border-ink p-[1.5rem] border border-gray-faint">
+              <span class="text-[0.7rem] font-bold uppercase tracking-[0.1em] text-gray-mid block mb-[0.5rem]">Artefak Pembelajaran Terpilih</span>
+              <p class="text-[0.95rem] text-charcoal mb-[1rem]">Jurnal Refleksi Kasus Nice (Statistika Bivariat), Refleksi Akhir Semester, dan Dokumen Solusi Kasus Growth Mindset.</p>
+              <div class="flex flex-wrap gap-[1rem]">
+                <a href="https://drive.google.com/file/d/1dYi8atQghgHFUTx25dmoIfYciULgjGCF/view" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Lihat Refleksi Akhir ↗</a>
+                <a href="https://drive.google.com/file/d/1zTcjQm-ZhAwgwlsVuN6csVEZXX_amgLU/view" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Lihat Kasus Kelompok ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBTAB CONTENT: 4. PSE -->
+          <div id="subpanel-pse" class="subtab-panel hidden space-y-[1.5rem]">
+            <div class="border-b border-gray-faint pb-[1rem]">
+              <span class="text-[0.68rem] font-bold tracking-[0.14em] uppercase text-gray-mid block mb-[0.25rem]">Mata Kuliah Inti</span>
+              <h3 class="text-[1.6rem] font-bold text-ink">Pembelajaran Sosial Emosional (PSE)</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem]">
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Connection</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Guru adalah teladan dalam regulasi emosi. Pengelolaan emosi pendidik yang terencana menciptakan iklim belajar yang aman, kondusif, dan mendukung kesiapan kognitif murid.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Challenge</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Mengendalikan respons spontan saat kelas gaduh atau jawaban murid belum tepat. Menyalurkan energi murid menjadi productive noise melalui pembelajaran interaktif.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Concept</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Kerangka CASEL (5 KSE: Kesadaran Diri, Manajemen Diri, Kesadaran Sosial, Keterampilan Relasi, Pengambilan Keputusan Bertanggung Jawab) dan Teknik STOP.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Change</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Menerapkan active listening sebelum merespons, serta menyusun Class Agreement (seperti aturan Suara Level Diskusi) untuk rasa tanggung jawab kolektif.</p>
+              </div>
+            </div>
+            <div class="bg-paper-card border-l-[4px] border-ink p-[1.5rem] border border-gray-faint">
+              <span class="text-[0.7rem] font-bold uppercase tracking-[0.1em] text-gray-mid block mb-[0.5rem]">Artefak Pembelajaran Terpilih</span>
+              <p class="text-[0.95rem] text-charcoal mb-[1rem]">Presentasi Studi Kasus CASEL SMAN 6 Yogyakarta (Anuitas via Isu Finansial Generasi Sandwich) dan Analisis Kasus Dinamika Kelas.</p>
+              <div class="flex flex-wrap gap-[1rem]">
+                <a href="https://drive.google.com/file/d/124hSupAXfSo3V7hVBiWsbmqtpv6N8J14/view" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Lihat Presentasi CASEL ↗</a>
+                <a href="https://drive.google.com/file/d/1J7utCP00gb9C_eb3WYem5zxpTjbQ0qnx/view" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Lihat Analisis Kasus 1C ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBTAB CONTENT: 5. PMAL -->
+          <div id="subpanel-pmal" class="subtab-panel hidden space-y-[1.5rem]">
+            <div class="border-b border-gray-faint pb-[1rem]">
+              <span class="text-[0.68rem] font-bold tracking-[0.14em] uppercase text-gray-mid block mb-[0.25rem]">Mata Kuliah Lanjut</span>
+              <h3 class="text-[1.6rem] font-bold text-ink">Pembelajaran Mendalam dan Asesmen Lanjut (PMAL)</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem]">
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Connection</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Konsep geometri 3D yang abstrak (jarak titik ke garis) membutuhkan Desain Universal Pembelajaran (DUP) dan Deep Learning (Mindful, Meaningful, Joyful) agar konkret dan terhubung ke dunia nyata.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Challenge</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Menemukan bahwa DUP dan Pembelajaran Berdiferensiasi saling menguatkan: DUP membuka akses inklusif sejak awal, sedangkan diferensiasi memfasilitasi kesiapan kognitif murid tanpa membedakan tujuan capaian.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Concept</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Tiga pilar DUP (Keterlibatan, Representasi, Aksi/Ekspresi), integrasi Augmented Reality (Assemblr EDU), serta keseimbangan asesmen (AaL, AfL, AoL).</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Change</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Menyusun pertanyaan esensial kontekstual, memberikan kebebasan bentuk pelaporan hasil diskusi, dan selalu menyiapkan peraga fisik cadangan jika gawai mengalami kendala.</p>
+              </div>
+            </div>
+            <div class="bg-paper-card border-l-[4px] border-ink p-[1.5rem] border border-gray-faint">
+              <span class="text-[0.7rem] font-bold uppercase tracking-[0.1em] text-gray-mid block mb-[0.5rem]">Artefak Pembelajaran Terpilih</span>
+              <p class="text-[0.95rem] text-charcoal mb-[1rem]">Laporan UTS PMAL: Profiling 36 Murid, LKPD Diferensiasi Konten (Kubus, Balok, Limas), dan Desain Media AR.</p>
+              <div class="flex flex-wrap gap-[1rem]">
+                <a href="https://drive.google.com/file/d/123zi6Wj1UJDa_SVP3hUH27YJFBKkZbAJ/view" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Lihat Dokumen UTS PMAL ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBTAB CONTENT: 6. TEKNOLOGI BARU -->
+          <div id="subpanel-tekno" class="subtab-panel hidden space-y-[1.5rem]">
+            <div class="border-b border-gray-faint pb-[1rem]">
+              <span class="text-[0.68rem] font-bold tracking-[0.14em] uppercase text-gray-mid block mb-[0.25rem]">Mata Kuliah Inti</span>
+              <h3 class="text-[1.6rem] font-bold text-ink">Teknologi Baru dalam Pengajaran dan Pembelajaran</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem]">
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Connection</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Pemanfaatan teknologi bukan sekadar digitalisasi media, melainkan mengubah gawai murid dari sumber distraksi menjadi sarana eksplorasi bernalar dan analisis data matematika.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Challenge</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Integrasi AI sebagai penyedia scaffolding bernalar bertahap (tiered reasoning), serta pemanfaatan objek 3D Blender untuk visualisasi konsep spasial abstrak.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Concept</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Platform digital (GeoGebra, Spreadsheet) berfungsi sebagai perantara kalkulasi rumit agar fokus murid tertuju pada penalaran konsep, analisis, dan interpretasi makna data.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Change</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Mengembangkan produk LKM digital interaktif berbasis web untuk memfasilitasi pembelajaran berdiferensiasi dan eksplorasi mandiri.</p>
+              </div>
+            </div>
+            <div class="bg-paper-card border-l-[4px] border-ink p-[1.5rem] border border-gray-faint">
+              <span class="text-[0.7rem] font-bold uppercase tracking-[0.1em] text-gray-mid block mb-[0.5rem]">Artefak Pembelajaran Terpilih</span>
+              <p class="text-[0.95rem] text-charcoal mb-[1rem]">Laporan Analisis Kebutuhan Topik 5, Video Pemanfaatan Media 3D, dan Produk LKM Digital Interaktif Web.</p>
+              <div class="flex flex-wrap gap-[1rem]">
+                <a href="https://rifqifausta.github.io/Tes/" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Akses Produk E-Worksheet Web ↗</a>
+                <a href="https://youtu.be/9iq-PX-s-GY" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Tonton Video UTS Media 3D ↗</a>
+                <a href="https://drive.google.com/file/d/1HsZKyMFRMcQjmkEdbU0jDAIkChaiPWBU/view" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Laporan Analisis Topik 5 ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBTAB CONTENT: 7. PPL MANDIRI -->
+          <div id="subpanel-ppl" class="subtab-panel hidden space-y-[1.5rem]">
+            <div class="border-b border-gray-faint pb-[1rem]">
+              <span class="text-[0.68rem] font-bold tracking-[0.14em] uppercase text-gray-mid block mb-[0.25rem]">Praktik Lapangan</span>
+              <h3 class="text-[1.6rem] font-bold text-ink">Praktik Pengalaman Lapangan (PPL) Mandiri</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem]">
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Connection</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Menguji teori pedagogik secara riil: melatih manajemen kelas, memahami dinamika murid, dan merancang pembelajaran yang menjawab kebutuhan autentik di SMAN 6 Yogyakarta.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Challenge</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Tantangan mengidentifikasi keragaman gaya belajar dan tingkat kesiapan kognitif murid kelas XI F6 dalam alokasi waktu yang terbatas.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Concept</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Guru sebagai fasilitator konstruksi pengetahuan (learning designer), penerapan Teaching at the Right Level (TaRL), dan praktik reflektif berbasis asesmen proses.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Change</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Beralih dari guru pemberi ceramah menjadi perancang pengalaman belajar, konsisten mengintegrasikan teknologi interaktif, dan rutin menulis refleksi selesai pembelajaran.</p>
+              </div>
+            </div>
+            <div class="bg-paper-card border-l-[4px] border-ink p-[1.5rem] border border-gray-faint">
+              <span class="text-[0.7rem] font-bold uppercase tracking-[0.1em] text-gray-mid block mb-[0.5rem]">Artefak Pembelajaran Terpilih</span>
+              <p class="text-[0.95rem] text-charcoal mb-[1rem]">Rancangan Pembelajaran Mandiri (RPM) Siklus 2: Invers Komposisi Fungsi (Konteks Detektif Jejak Diskon Ganda, Asesmen Typeform, & Integrasi STOP).</p>
+              <div class="flex flex-wrap gap-[1rem]">
+                <a href="https://drive.google.com/file/d/1g9Pa0ImUREdo3I0QvXdOVlozQ_nnUk08/view" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Lihat RPM Siklus Mandiri 2 ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUBTAB CONTENT: 8. PROYEK KEPEMIMPINAN -->
+          <div id="subpanel-projek" class="subtab-panel hidden space-y-[1.5rem]">
+            <div class="border-b border-gray-faint pb-[1rem]">
+              <span class="text-[0.68rem] font-bold tracking-[0.14em] uppercase text-gray-mid block mb-[0.25rem]">Pengembangan Komunitas</span>
+              <h3 class="text-[1.6rem] font-bold text-ink">Proyek Kepemimpinan</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-[1.25rem]">
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Connection</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Peran guru sebagai agen perubahan di luar kelas melalui proyek "Pemanfaatan Limbah Organik Rumah Tangga Menjadi Pupuk Organik Cair (POC)" bersama KWT Karangampel berbasis SDGs 12 & 13.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Challenge</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Beralih dari penanganan masalah parsial (deficit-focused) menuju pola pikir Berpikir Sistem (Systems Thinking) dan Manajemen Perubahan berbasis Aset (Asset-Based Appreciative Inquiry).</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Concept</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Siklus Inkuiri Kath Murdoch (Tuning In hingga Taking Action) dan Kerangka Sustainability NEWS (Nature, Economy, Well-being, Society) dalam pemberdayaan komunitas.</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.5rem] py-[0.25rem] mb-[0.75rem]">Change</span>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">Pendidikan adalah tanggung jawab bersama sekolah, keluarga, dan masyarakat. Menerapkan kepemimpinan pembelajaran yang empatik (Seek First to Understand dan Synergize).</p>
+              </div>
+            </div>
+            <div class="bg-paper-card border-l-[4px] border-ink p-[1.5rem] border border-gray-faint">
+              <span class="text-[0.7rem] font-bold uppercase tracking-[0.1em] text-gray-mid block mb-[0.5rem]">Artefak Pembelajaran Terpilih</span>
+              <p class="text-[0.95rem] text-charcoal mb-[1rem]">Proposal Proyek Kepemimpinan: Sinergi Bersama BPP Candimulyo dan KWT Karangampel.</p>
+              <div class="flex flex-wrap gap-[1rem]">
+                <a href="https://drive.google.com/file/d/1Fs8zs3TAV5LqiC81BRBiB3suZEHRboSn/view" target="_blank" class="text-[0.78rem] font-bold uppercase tracking-[0.06em] text-ink border-b-2 border-ink pb-[0.15rem] hover:opacity-75 transition-opacity">Lihat Proposal Proyek POC ↗</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ==================== TAB PANEL 3: LK 3 ==================== -->
+        <div id="panel-lk3" class="tab-panel hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-[2rem] lg:gap-[3.5rem]">
+            
+            <div class="lg:col-span-6 space-y-[1.5rem]">
+              <span class="text-[0.68rem] font-bold tracking-[0.14em] uppercase text-gray-mid block">Refleksi Menyeluruh PPG</span>
+              <h3 class="text-[1.5rem] sm:text-[1.85rem] font-bold text-ink leading-tight">
+                Bagaimana Seharusnya Pendidikan di Indonesia?
+              </h3>
+              <p class="text-[1rem] text-charcoal leading-[1.75]">
+                Pendidikan di Indonesia seharusnya mengedepankan kolaborasi dan keterlibatan aktif dari seluruh pihak, terutama orang tua dan masyarakat. Tanggung jawab pendidikan tidak semestinya dilimpahkan sepenuhnya kepada guru di sekolah.
+              </p>
+              <p class="text-[1rem] text-charcoal leading-[1.75]">
+                Mengingat seorang anak hanya menghabiskan waktu sekitar sepertiga dari total kehidupannya bersama guru selama masa sekolah 12 tahun, peran sentral keluarga dan lingkungan menjadi sangat krusial. Sistem pendidikan yang ideal harus mampu menjembatani kerja sama yang erat antara sekolah, orang tua, dan masyarakat demi kelancaran pembentukan karakter dan pengetahuan murid.
+              </p>
+
+              <div class="pt-[1.5rem] border-t border-gray-faint">
+                <h4 class="text-[1.2rem] font-bold text-ink mb-[0.5rem]">Kesiapan Diri sebagai Guru Profesional</h4>
+                <p class="text-[0.98rem] text-charcoal leading-[1.7]">
+                  Terus meningkatkan kompetensi psikologi perkembangan murid untuk memahami karakter secara mendalam dan empatik. Sebagai komitmen inklusivitas konkret, saya membekali diri dengan mempelajari <strong>Bahasa Isyarat Indonesia (BISINDO)</strong> dan <strong>huruf Braille</strong> agar siap melayani murid berkebutuhan khusus secara setara.
+                </p>
+              </div>
+            </div>
+
+            <div class="lg:col-span-6 space-y-[1.25rem]">
+              <span class="text-[0.68rem] font-bold tracking-[0.14em] uppercase text-gray-mid block">Rencana Tindak Lanjut (RTL)</span>
+              <h3 class="text-[1.5rem] sm:text-[1.85rem] font-bold text-ink leading-tight">
+                3 Prioritas Memulai Karir Guru
+              </h3>
+
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.12em] text-gray-mid block mb-[0.35rem]">Prioritas 01</span>
+                <h4 class="text-[1.1rem] font-bold text-ink mb-[0.5rem]">Kolaborasi Awal dengan Orang Tua Murid</h4>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">
+                  Membangun sistem komunikasi dan koordinasi proaktif sejak awal semester untuk memantau perkembangan belajar murid dan mencegah kendala belajar sedini mungkin.
+                </p>
+              </div>
+
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.12em] text-gray-mid block mb-[0.35rem]">Prioritas 02</span>
+                <h4 class="text-[1.1rem] font-bold text-ink mb-[0.5rem]">Asesmen Psikologis & Pemetaan Karakter</h4>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">
+                  Memetakan kondisi psikologis, gaya belajar, dan kesiapan kognitif murid di pertemuan-pertemuan awal sebelum mentransfer materi akademis yang rumit.
+                </p>
+              </div>
+
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="text-[0.68rem] font-extrabold uppercase tracking-[0.12em] text-gray-mid block mb-[0.35rem]">Prioritas 03</span>
+                <h4 class="text-[1.1rem] font-bold text-ink mb-[0.5rem]">Menciptakan Kelas Aman & Inklusif</h4>
+                <p class="text-[0.95rem] text-charcoal leading-[1.65]">
+                  Menanamkan nilai-nilai toleransi, mencegah perundungan (bullying), serta mengenalkan dasar BISINDO agar seluruh murid merasa diterima dan aman berbuat salah saat belajar.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ==================== TAB PANEL 4: LK 4 ==================== -->
+        <div id="panel-lk4" class="tab-panel hidden">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-[2rem] lg:gap-[3.5rem]">
+            
+            <div class="lg:col-span-12 border-b border-gray-faint pb-[1.5rem]">
+              <span class="text-[0.68rem] font-bold tracking-[0.14em] uppercase text-gray-mid block mb-[0.25rem]">Lembar Kerja 4 · Inovasi Pembelajaran</span>
+              <h3 class="text-[1.75rem] sm:text-[2.25rem] font-extrabold text-ink leading-tight">
+                Penerapan Model Think-Pair-Share (TPS) Berbantuan E-Worksheet Interaktif
+              </h3>
+              <p class="text-gray-dark text-[1rem] mt-[0.5rem]">
+                Karya Inovasi Peningkatan Kemandirian Belajar dan Hasil Belajar Matematika Murid Kelas XI F8 SMAN 6 Yogyakarta
+              </p>
+            </div>
+
+            <!-- Metadata Box -->
+            <div class="lg:col-span-4 space-y-[1.25rem]">
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="text-[0.68rem] font-bold uppercase tracking-[0.14em] text-gray-mid block mb-[0.35rem]">Sasaran Subjek</span>
+                <p class="text-[1.05rem] font-bold text-ink">Murid Kelas XI F8 SMAN 6 Yogyakarta</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="text-[0.68rem] font-bold uppercase tracking-[0.14em] text-gray-mid block mb-[0.35rem]">Model & Media</span>
+                <p class="text-[1.05rem] font-bold text-ink">Think-Pair-Share (TPS) + E-Worksheet Web Interaktif</p>
+              </div>
+              <div class="bg-paper-warm border border-gray-faint p-[1.5rem] rounded-[0.125rem]">
+                <span class="text-[0.68rem] font-bold uppercase tracking-[0.14em] text-gray-mid block mb-[0.35rem]">Tujuan Inovasi</span>
+                <p class="text-[0.95rem] text-charcoal font-medium leading-[1.6]">
+                  1. Meningkatkan kemandirian belajar murid melalui eksplorasi terstruktur.<br>
+                  2. Meningkatkan hasil belajar matematika murid.
+                </p>
+              </div>
+            </div>
+
+            <!-- Core Innovation Details -->
+            <div class="lg:col-span-8 space-y-[2rem]">
+              <div>
+                <h4 class="text-[1.25rem] font-bold text-ink mb-[0.75rem]">Identifikasi Kebutuhan & Tantangan Kelas</h4>
+                <p class="text-[1rem] text-charcoal leading-[1.75]">
+                  Hasil profiling menunjukkan sebagian murid menghadapi tantangan dalam kemandirian belajar, konsentrasi yang mudah terdistraksi gawai, dan keengganan berpartisipasi aktif dalam diskusi kelas besar. Hal ini berdampak pada pencapaian hasil belajar matematika yang belum optimal. Diperlukan model pembelajaran kooperatif berstruktur yang melatih nalar mandiri sebelum kolaborasi kelompok.
+                </p>
+              </div>
+
+              <!-- Sintaks TPS Grid -->
+              <div>
+                <h4 class="text-[1.25rem] font-bold text-ink mb-[1rem]">Sintaks Pembelajaran Berurutan</h4>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-[1rem]">
+                  <div class="bg-paper-warm border border-gray-faint p-[1.25rem] rounded-[0.125rem]">
+                    <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.45rem] py-[0.2rem] mb-[0.5rem]">1. Think</span>
+                    <h5 class="font-bold text-[0.95rem] mb-[0.35rem]">Mandiri</h5>
+                    <p class="text-[0.88rem] text-charcoal leading-[1.6]">Murid membaca materi kontekstual dan menyelesaikan masalah awal di E-Worksheet secara individu untuk melatih kemandirian nalar.</p>
+                  </div>
+                  <div class="bg-paper-warm border border-gray-faint p-[1.25rem] rounded-[0.125rem]">
+                    <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.45rem] py-[0.2rem] mb-[0.5rem]">2. Pair</span>
+                    <h5 class="font-bold text-[0.95rem] mb-[0.35rem]">Berpasangan</h5>
+                    <p class="text-[0.88rem] text-charcoal leading-[1.6]">Murid berdiskusi dengan teman sebangku, mencocokkan strategi hitungan, dan menyelaraskan jawaban di E-Worksheet.</p>
+                  </div>
+                  <div class="bg-paper-warm border border-gray-faint p-[1.25rem] rounded-[0.125rem]">
+                    <span class="inline-block text-[0.62rem] font-extrabold uppercase tracking-[0.12em] bg-ink text-paper px-[0.45rem] py-[0.2rem] mb-[0.5rem]">3. Share</span>
+                    <h5 class="font-bold text-[0.95rem] mb-[0.35rem]">Berbagi Kelas</h5>
+                    <p class="text-[0.88rem] text-charcoal leading-[1.6]">Perwakilan pasangan mempresentasikan hasil diskusi di depan kelas dengan media digital, dilanjutkan klarifikasi guru.</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Evaluasi -->
+              <div>
+                <h4 class="text-[1.25rem] font-bold text-ink mb-[0.75rem]">Tahapan Evaluasi Keberhasilan</h4>
+                <p class="text-[1rem] text-charcoal leading-[1.75]">
+                  Tingkat keberhasilan inovasi diukur secara komprehensif melalui: <strong>Asesmen Hasil Belajar</strong> (tes formatif/post-test konsep matematika), <strong>Asesmen Kemandirian Belajar</strong> (lembar observasi keterlibatan aktif dan angket kemandirian), serta <strong>Refleksi Pembelajaran</strong> (evaluasi keterlaksanaan sintaks dan umpan balik murid).
+                </p>
+              </div>
+
+              <!-- Evidence Box -->
+              <div class="bg-paper-card border-l-[4px] border-ink p-[1.5rem] border border-gray-faint">
+                <span class="text-[0.7rem] font-bold uppercase tracking-[0.1em] text-gray-mid block mb-[0.5rem]">Dasar Riset Solusi</span>
+                <p class="text-[0.95rem] text-charcoal mb-[1rem]">
+                  Didukung bukti ilmiah: TPS meningkatkan ketuntasan belajar dari 35,71% ke 100% (Wassar, 2025) serta menghasilkan kenaikan N-Gain 0,62 berbanding 0,33 pada pembelajaran konvensional (Noverica, 2026).
+                </p>
+               </div>
+
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EDITORIAL CLOSING BLOCK -->
+    <section class="bg-paper-warm border-t border-b border-gray-faint px-[1.25rem] sm:px-[2rem] lg:px-[3.75rem] py-[4rem] text-center">
+      <div class="max-w-[42rem] mx-auto">
+        <h3 class="text-[1.75rem] sm:text-[2.25rem] font-extrabold tracking-[-0.03em] text-ink mb-[1rem]">
+          Menjadi Pendidik yang Reflektif
+        </h3>
+        <p class="text-[1.05rem] text-gray-dark leading-[1.7]">
+          "Pendidikan bukan sekadar transfer of knowledge, melainkan memelihara daya cipta, rasa, dan karsa murid agar mencapai keselamatan dan kebahagiaan yang setinggi-tingginya."
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-paper border-t border-gray-faint px-[1.25rem] sm:px-[2rem] lg:px-[3.75rem] py-[2.5rem]">
+    <div class="max-w-[77.5rem] mx-auto flex flex-col sm:flex-row justify-between items-center gap-[1rem] text-center sm:text-left">
+      <div class="font-extrabold text-[0.8rem] tracking-[0.08em] uppercase text-ink">
+        Rifqi Fausta Dianta — Portofolio PPG Prajabatan
+      </div>
+      <div class="text-[0.75rem] text-gray-mid font-medium">
+        Universitas Sanata Dharma · SMAN 6 Yogyakarta · 2026
+      </div>
+    </div>
+  </footer>
+
+  <!-- VANILLA JAVASCRIPT FOR TABS INTERACTION -->
+  <script>
+    // Main Tab Switcher
+    function switchMainTab(tabKey) {
+      // Deactivate all main tab buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active', 'border-ink', 'bg-ink', 'text-paper');
+        btn.classList.add('border-gray-faint', 'bg-transparent', 'text-gray-mid');
+      });
+
+      // Activate clicked button
+      const targetBtn = document.getElementById('tab-btn-' + tabKey);
+      if (targetBtn) {
+        targetBtn.classList.add('active', 'border-ink', 'bg-ink', 'text-paper');
+        targetBtn.classList.remove('border-gray-faint', 'bg-transparent', 'text-gray-mid');
+      }
+
+      // Hide all panels
+      document.querySelectorAll('.tab-panel').forEach(panel => {
+        panel.classList.add('hidden');
+        panel.classList.remove('block');
+      });
+
+      // Show target panel
+      const targetPanel = document.getElementById('panel-' + tabKey);
+      if (targetPanel) {
+        targetPanel.classList.remove('hidden');
+        targetPanel.classList.add('block');
+      }
+    }
+
+    // Sub Tab Switcher (Inside LK 2)
+    function switchSubTab(courseKey) {
+      // Deactivate all subtab buttons
+      document.querySelectorAll('.subtab-btn').forEach(btn => {
+        btn.classList.remove('active', 'bg-charcoal', 'text-paper', 'border-charcoal');
+        btn.classList.add('bg-paper-warm', 'text-charcoal', 'border-gray-faint');
+      });
+
+      // Activate clicked subtab button
+      const activeBtn = document.getElementById('subbtn-' + courseKey);
+      if (activeBtn) {
+        activeBtn.classList.add('active', 'bg-charcoal', 'text-paper', 'border-charcoal');
+        activeBtn.classList.remove('bg-paper-warm', 'text-charcoal', 'border-gray-faint');
+      }
+
+      // Hide all subtab panels
+      document.querySelectorAll('.subtab-panel').forEach(panel => {
+        panel.classList.add('hidden');
+        panel.classList.remove('block');
+      });
+
+      // Show target subtab panel
+      const targetSubPanel = document.getElementById('subpanel-' + courseKey);
+      if (targetSubPanel) {
+        targetSubPanel.classList.remove('hidden');
+        targetSubPanel.classList.add('block');
+      }
+    }
+  </script>
+</body>
+</html>
